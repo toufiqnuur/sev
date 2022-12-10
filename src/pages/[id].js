@@ -8,7 +8,7 @@ export async function getServerSideProps({ params }) {
   const { data } = await supabase
     .from("urls")
     .select()
-    .eq("slug", params.slug)
+    .eq("slug", params.id)
     .single();
 
   if (data) {
