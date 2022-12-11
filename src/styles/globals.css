@@ -6,7 +6,7 @@
   @apply relative;
 }
 .bg--doodle::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -18,7 +18,7 @@
   z-index: -1;
 }
 .bg--doodle::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -28,3 +28,8 @@
   z-index: -1;
 }
 
+@layer components {
+  .container {
+    @apply mx-auto max-w-screen-lg px-4;
+  }
+}

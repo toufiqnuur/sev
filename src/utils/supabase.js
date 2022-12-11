@@ -21,6 +21,7 @@ export const insertUrlGuestMode = async (url) => {
       slug: nanoid(10),
       expired_at: dayjs().add(7, "days"),
     })
-    .select();
+    .select()
+    .single();
   return response;
 };
