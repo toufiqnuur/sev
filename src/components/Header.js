@@ -1,21 +1,18 @@
 import Link from "next/link";
 import Container from "./Container";
-import { IoMdLogIn } from "react-icons/io";
 
 export default function Header() {
   return (
     <header>
-      <Container className="flex h-16 items-center justify-between">
-        <Link href="/" className="text-2xl font-bold">
-          sev.
+      <Container className="flex items-center justify-between py-6 lg:max-w-screen-xl">
+        <Link href="/" className="-mt-4 text-5xl font-semibold">
+          s<span className="rounded-xl border-b-4 border-blue-600">v.</span>
         </Link>
-        <Link
-          href="/auth/signin"
-          className="flex items-center space-x-3 rounded-lg bg-blue-500 px-4 py-2 font-semibold text-white focus:outline-blue-300"
-        >
-          <IoMdLogIn />
-          <span>Masuk</span>
-        </Link>
+        <div>
+          <button className="easy-in-out rounded-2xl bg-white px-4 py-2 text-lg font-medium text-blue-600 shadow-lg shadow-blue-600/20 transition delay-100 duration-300 hover:-translate-y-1 md:px-6 md:py-3 md:text-xl">
+            Login
+          </button>
+        </div>
       </Container>
     </header>
   );
