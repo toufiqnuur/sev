@@ -3,8 +3,11 @@ import BaseLayout from "../components/BaseLayout";
 import Container from "../components/Container";
 import Image from "next/image";
 import GuestForm from "../components/GuestForm";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <BaseLayout>
       <Head>
@@ -27,7 +30,7 @@ export default function Home() {
             shortener.
           </p>
           <button
-            onClick={() => (location.href = "#trial-section")}
+            onClick={() => router.push("#trial-section")}
             className="easy-in-out mt-12 rounded-2xl bg-blue-600 px-4 py-2 text-lg font-medium text-white shadow-xl shadow-blue-600/50 transition delay-100 duration-300 hover:-translate-y-1 md:px-6 md:py-3 md:text-xl"
           >
             Get started
@@ -39,6 +42,7 @@ export default function Home() {
               width={1300}
               height={1000}
               alt=""
+              priority
             />
           </div>
         </div>
@@ -64,6 +68,7 @@ export default function Home() {
               width={400}
               height={500}
               alt=""
+              loading="lazy"
             />
             <div className="space-y-8 font-medium md:w-1/3">
               <div>
